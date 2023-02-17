@@ -1,16 +1,13 @@
 Snapcraft Guides
 ================
 
+.. warning:: This repository contains unofficial and temporary documentation to help outline and draft new documentation for `Snapcraft`_.
+
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Table of Contents
 
-   Examples/index
+   Tutorials/index
+   How_To_Guides/index
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. include:: /links.rst
