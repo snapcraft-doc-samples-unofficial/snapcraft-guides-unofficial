@@ -1028,7 +1028,7 @@ a.wy-text-danger:hover{color:#ed7669 !important}
 .wy-text-neutral{color:#404040 !important}
 a.wy-text-neutral:hover{color:#595959 !important}
 h1,h2,.rst-content .toctree-wrapper>p.caption,h3,h4,h5,h6,legend{margin-top:0;font-weight:700;font-family:"Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif}
-p{line-height:24px;margin:0;font-size:16px;margin-bottom:1em}
+p{line-height:24px;margin:0;font-size:16px;margin-bottom:0.75em}
 h1{font-size:175%}
 h2,.rst-content .toctree-wrapper>p.caption{font-size:150%}
 h3{font-size:125%}
@@ -1036,7 +1036,7 @@ h4{font-size:115%}
 h5{font-size:110%}
 h6{font-size:100%}
 hr{display:block;height:1px;border:0;border-top:1px solid #e1e4e5;margin:24px 0;padding:0}
-code,.rst-content tt,.rst-content code{white-space:nowrap;max-width:100%;background:#fff;border:solid 1px #e1e4e5;font-size:75%;padding:0 5px;font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;color:#E74C3C;overflow-x:auto}
+code,.rst-content tt,.rst-content code{white-space:nowrap;max-width:100%;background:#fff;font-size:75%;padding:0 5px;font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;color:#E74C3C;overflow-x:auto}
 code.code-large,.rst-content tt.code-large{font-size:90%}
 .wy-plain-list-disc,.rst-content .section ul,.rst-content section ul,.rst-content .toctree-wrapper ul,article ul{list-style:disc;line-height:24px;margin-bottom:24px}
 .wy-plain-list-disc li,.rst-content .section ul li,.rst-content section ul li,.rst-content .toctree-wrapper ul li,article ul li{list-style:disc;margin-left:24px}
@@ -1228,7 +1228,7 @@ footer span.commit code,footer span.commit .rst-content tt,.rst-content footer s
 .rst-content.style-external-links a.reference.external:after{font-family:FontAwesome;content:"";color:#b3b3b3;vertical-align:super;font-size:60%;margin:0 .2em}
 .rst-content blockquote{margin-left:24px;line-height:24px;margin-bottom:24px}
 .rst-content pre.literal-block{white-space:pre;margin:0;padding:12px 12px;font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;display:block;overflow:auto}
-.rst-content pre.literal-block,.rst-content div[class^='highlight']{border:1px solid #e1e4e5;overflow-x:auto;margin:1px 0 24px 0}
+.rst-content pre.literal-block,.rst-content div[class^='highlight']{border:1px solid #c1c4c5;overflow-x:auto;margin:1px 0 12px 0}
 .rst-content pre.literal-block div[class^='highlight'],.rst-content div[class^='highlight'] div[class^='highlight']{padding:0px;border:none;margin:0}
 .rst-content div[class^='highlight'] td.code{width:100%}
 .rst-content .linenodiv pre{border-right:solid 1px #e6e9ea;margin:0;padding:12px 12px;font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;user-select:none;pointer-events:none}
@@ -1310,7 +1310,7 @@ html.writer-html5 .rst-content table.docutils th>p,html.writer-html5 .rst-conten
 .rst-content table.field-list .field-body{text-align:left}
 .rst-content tt,.rst-content tt,.rst-content code{color:#000;font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace;padding:2px 5px}
 .rst-content tt big,.rst-content tt em,.rst-content tt big,.rst-content code big,.rst-content tt em,.rst-content code em{font-size:100% !important;line-height:normal}
-.rst-content tt.literal,.rst-content tt.literal,.rst-content code.literal{color:#E74C3C;white-space:normal}
+.rst-content tt.literal,.rst-content tt.literal,.rst-content code.literal{font-weight:bold;color:black;white-space:normal}
 .rst-content tt.xref,a .rst-content tt,.rst-content tt.xref,.rst-content code.xref,a .rst-content tt,a .rst-content code{font-weight:bold;color:#404040}
 .rst-content pre,.rst-content kbd,.rst-content samp{font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",Courier,monospace}
 .rst-content a tt,.rst-content a tt,.rst-content a code{color:#2980B9}
