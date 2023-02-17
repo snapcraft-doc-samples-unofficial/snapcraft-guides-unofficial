@@ -11,7 +11,7 @@ This guide shows how to enable classic confinement for a snap built with the
 Change the confinement to classic
 ---------------------------------
 
-Starting with an existing `snapcraft.yaml` file, change the `confinement` setting to `classic`:
+Starting with an existing `snapcraft.yaml` file, change the ``confinement`` setting to ``classic``:
 
 .. code:: yaml
 
@@ -41,7 +41,7 @@ In this example, the warnings about the ELF interpreter and rpath can be handled
 * ``-Wl,-dynamic-linker=/snap/core22/current/lib64/ld-linux-x86-64.so.2``
 * ``-Wl,-rpath=/snap/core22/current/lib/x86_64-linux-gnu``
 
-If the `LDFLAGS` environment variable is used in the Makefile, the `snapcraft.yaml` file could be updated to pass these options to the `make` plugin, like this:
+If the ``LDFLAGS`` environment variable is used in the Makefile, the `snapcraft.yaml` file could be updated to pass these options to the ``make`` plugin, like this:
 
 .. literalinclude:: example/snap/snapcraft.yaml
    :language: yaml

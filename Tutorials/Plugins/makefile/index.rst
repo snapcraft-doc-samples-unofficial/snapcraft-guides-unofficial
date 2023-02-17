@@ -10,10 +10,10 @@ You will need to `install Snapcraft`_ before following these steps.
 Clone and build the example
 ---------------------------
 
-Use `git` to clone this repository into a new directory and make it the
+Use ``git`` to clone this repository into a new directory and make it the
 current working directory.
 
-Test that the project builds in the normal way by running `make`. This should
+Test that the project builds in the normal way by running ``make``. This should
 give output like the following::
 
    $ make
@@ -35,12 +35,28 @@ Now that you have a working application, you can start to package it as a snap.
 Using a snapcraft project file
 ------------------------------
 
-Normally, you would run `snapcraft init` in the project directory to create an initial `snap/snapcraft.yaml` project file that you can edit. In this case the project file is already provided:
+Normally, you would run ``snapcraft init`` in the project directory to create an initial `snap/snapcraft.yaml` project file that you can edit. In this case the project file is already provided:
 
 .. literalinclude:: example/snap/snapcraft.yaml
    :language: yaml
 
-In the `parts` section, note the values of the `plugin` and `source` keys for the `make-example-part`. These tells snapcraft to use the `make` plugin to build the contents of the project directory.
+In the ``parts`` section, note the values of the ``plugin`` and ``source`` keys for the ``make-example-part``. These tell Snapcraft to use the ``make`` plugin to build the contents of the project directory.
+
+Build the snap
+--------------
+
+Run Snapcraft without any commands to build a snap:
+
+.. code:: bash
+
+   $ snapcraft
+
+If successful, this will produce output like the following:
+
+.. literalinclude:: example/logs/build.txt
+
+If errors or warnings are reported, take a look at the `troubleshooting guide`_.
 
 .. _`this repository`: https://github.com/snapcraft-doc-samples-unofficial/makefile-example
+.. _`troubleshooting guide`: https://snapcraft.io/docs/troubleshoot-snap-building
 .. include:: /links.rst
