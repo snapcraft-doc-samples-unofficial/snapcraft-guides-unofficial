@@ -1,0 +1,9 @@
+[submodule "Examples/Plugins/makefile/example"]
+	path = Examples/Plugins/makefile/example
+	url = https://github.com/snapcraft-doc-samples-unofficial/makefile-example.git
+[submodule "Examples/Plugins/makefile-lib/example"]
+	path = Examples/Plugins/makefile-lib/example
+	url = https://github.com/snapcraft-doc-samples-unofficial/makefile-lib-example.git
+[submodule "Examples/Plugins/makefile-lib-patchelf/example"]
+	path = Examples/Plugins/makefile-lib-patchelf/example
+	url = https://github.com/snapcraft-doc-samples-unofficial/makefile-lib-patchelf-example.git
