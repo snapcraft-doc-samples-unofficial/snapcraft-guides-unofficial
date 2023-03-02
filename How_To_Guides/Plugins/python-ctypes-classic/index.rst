@@ -22,7 +22,8 @@ Patch ctypes to load system libraries
 
 If your application uses `ctypes`_ to access system libraries it will need to
 be bundled with a patched version of the module. To bundle ``ctypes``, include
-the relevant packages in the ``stage-packages`` list of packages:
+the relevant packages in the ``stage-packages`` list of packages. For the
+``core22`` base, the packages will be the following:
 
 .. literalinclude:: example/snap/snapcraft.yaml
    :language: yaml
