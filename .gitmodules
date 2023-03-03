@@ -10,6 +10,3 @@
 [submodule "How_To_Guides/Plugins/autotools-classic/example"]
 	path = How_To_Guides/Plugins/autotools-classic/example
 	url = https://github.com/snapcraft-doc-samples-unofficial/autotools-classic-example.git
-[submodule "How_To_Guides/Plugins/python-ctypes-classic/example"]
-	path = How_To_Guides/Plugins/python-ctypes-classic/example
-	url = https://github.com/snapcraft-doc-samples-unofficial/python-ctypes-example.git
