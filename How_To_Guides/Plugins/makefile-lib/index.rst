@@ -6,7 +6,7 @@ strict confinement, and are unable to do this via the available interfaces.
 These snaps are configured to use classic confinement.
 
 This guide shows how to enable classic confinement for a snap built with the
-`make` plugin. The example project used in this guide can be found in `this repository`_.
+`make plugin`_. The example project used in this guide can be found in `this repository`_.
 
 Change the confinement to classic
 ---------------------------------

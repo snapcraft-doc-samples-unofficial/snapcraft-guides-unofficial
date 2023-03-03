@@ -4,7 +4,8 @@ Set up classic confinement for a Python project
 .. include:: ../common/classic-intro.rst
 
 This guide shows how to enable classic confinement for a snap built with the
-`python` plugin. The example project used in this guide can be found in `this repository`_.
+`python plugin`_. The example project used in this guide can be found in
+the `example repository`_.
 
 Change the confinement to classic
 ---------------------------------
@@ -31,7 +32,7 @@ the relevant packages in the ``stage-packages`` list of packages. For the
    :end-at: - libpython3.10-stdlib
 
 Patching is done by overriding the build step to perform the build as normal,
-with ``snapcraftctl build``, then applying `a patch`_ to the staged module
+by running ``snapcraftctl build``, then applying `a patch`_ to the staged module
 file with a script:
 
 .. literalinclude:: example/snap/snapcraft.yaml
@@ -39,8 +40,10 @@ file with a script:
    :start-at: override-build: |
    :end-at: $SNAPCRAFT_PROJECT_DIR/snap/local/patch-ctypes.sh
 
-Run Snapcraft to build the snap. This may produce warnings about run-time
-library paths like the following:
+An `example script and patch`_ can be found in the `example repository`_.
+
+Run Snapcraft to build the snap with these changes. This may produce warnings
+about run-time library paths like the following:
 
 .. code:: text
 
@@ -56,14 +59,16 @@ Fix linter warnings by patching ELF binaries
 
 Snapcraft uses `linters`_ to check for issues during builds.
 
-The easiest way to handle warnings about the ELF interpreter and rpath is to let Snapcraft automatically patch the binaries using ``patchelf``. This is done by passing a build attribute to the ``make`` plugin:
+The easiest way to handle warnings about the ELF interpreter and rpath is to
+let Snapcraft automatically patch the binaries using ``patchelf``. This is
+done by passing a build attribute to the plugin:
 
 .. literalinclude:: example/snap/snapcraft.yaml
    :language: yaml
    :start-at: build-attributes:
    :end-at: - enable-patchelf
 
-**Note:** Snapcraft 7.2 does not currently perform automatic ELF patching for ``core22`` classic snaps. If automatic ELF file patching is required, use ``base: core20`` until Snapcraft 7.3 is released to stable or use a version from the edge channel.
+**Note:** Snapcraft 7.2 does not currently perform automatic ELF patching for ``core22`` classic snaps. If automatic ELF file patching is required, use ``base: core20`` until Snapcraft 7.3 is released to stable or use a version from the `edge channel <channels_>`_.
 
 Rebuild the snap
 ----------------
@@ -72,10 +77,12 @@ Run Snapcraft again to rebuild the snap, consulting the `Classic linter`_ docume
 
 See also `this article`_ for an overview of the classic linter and a discussion of the issues involved in building snaps for classic confinement.
 
-.. _`this repository`: https://github.com/snapcraft-doc-samples-unofficial/python-ctypes-example
+.. _`example repository`: https://github.com/snapcraft-doc-samples-unofficial/python-ctypes-example
 .. _`ctypes`: https://docs.python.org/3/library/ctypes.html
 .. _`a patch`: https://github.com/snapcraft-doc-samples-unofficial/python-ctypes-example/blob/main/snap/local/patches/ctypes_init.diff
 .. _`linters`: https://snapcraft.io/docs/linters
 .. _`Classic linter`: https://snapcraft.io/docs/linters-classic
 .. _`this article`: https://snapcraft.io/blog/the-new-classic-confinement-in-snaps-even-the-classics-need-a-change
+.. _`example script and patch`: https://github.com/snapcraft-doc-samples-unofficial/python-ctypes-example/tree/main/snap/local
+
 .. include:: /links.rst
