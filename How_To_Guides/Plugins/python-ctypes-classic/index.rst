@@ -24,7 +24,7 @@ Patch ctypes to load system libraries
 If your application uses `ctypes`_ to access system libraries it will need to
 be bundled with a patched version of the module. To bundle ``ctypes``, include
 the relevant packages in the ``stage-packages`` list of packages. For the
-``core22`` base, the packages will be the following:
+`core22 base`_, the packages will be the following:
 
 .. literalinclude:: example/snap/snapcraft.yaml
    :language: yaml
@@ -77,12 +77,12 @@ Run Snapcraft again to rebuild the snap, consulting the `Classic linter`_ docume
 
 See also `this article`_ for an overview of the classic linter and a discussion of the issues involved in building snaps for classic confinement.
 
-.. _`example repository`: https://github.com/snapcraft-doc-samples-unofficial/python-ctypes-example
+.. _`example repository`: https://github.com/snapcraft-docs/python-ctypes-example
 .. _`ctypes`: https://docs.python.org/3/library/ctypes.html
-.. _`a patch`: https://github.com/snapcraft-doc-samples-unofficial/python-ctypes-example/blob/main/snap/local/patches/ctypes_init.diff
+.. _`a patch`: https://github.com/snapcraft-docs/python-ctypes-example/blob/main/snap/local/patches/ctypes_init.diff
 .. _`linters`: https://snapcraft.io/docs/linters
 .. _`Classic linter`: https://snapcraft.io/docs/linters-classic
 .. _`this article`: https://snapcraft.io/blog/the-new-classic-confinement-in-snaps-even-the-classics-need-a-change
-.. _`example script and patch`: https://github.com/snapcraft-doc-samples-unofficial/python-ctypes-example/tree/main/snap/local
+.. _`example script and patch`: https://github.com/snapcraft-docs/python-ctypes-example/tree/main/snap/local
 
 .. include:: /links.rst

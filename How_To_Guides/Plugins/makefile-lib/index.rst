@@ -38,7 +38,9 @@ If there are many warnings about libraries you can disable the library linter so
 Fix linter warnings by patching ELF binaries
 --------------------------------------------
 
-The easiest way to handle warnings about the ELF interpreter and rpath is to let snapcraft automatically patch the binaries using ``patchelf``. This is done by passing a build attribute to the ``make`` plugin:
+The easiest way to handle warnings about the ELF interpreter and rpath is to let Snapcraft automatically patch the binaries using `patchelf`.
+
+This is enabled by default for `core20` classic snaps, and can also be enabled for `core22` classic snaps if you are using Snapcraft 7.3 or a version from the edge channel. Pass the `enable-patchelf` build attribute to the `make` plugin:
 
 .. code:: yaml
 
@@ -46,7 +48,7 @@ The easiest way to handle warnings about the ELF interpreter and rpath is to let
    build-attributes:
     - enable-patchelf
 
-**Note:** Snapcraft 7.2 does not currently perform automatic ELF patching for ``core22`` classic snaps. If automatic ELF file patching is required, use ``base: core20`` until Snapcraft 7.3 is released to stable or use a version from the edge channel.
+This can be removed when automatic patching is enabled for `core22` classic snaps in stable releases.
 
 Fix linter warnings in the Makefile
 -----------------------------------
