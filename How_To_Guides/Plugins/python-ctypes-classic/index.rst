@@ -57,18 +57,16 @@ modules need to be patched to refer to libraries in the base snap.
 Fix linter warnings by patching ELF binaries
 --------------------------------------------
 
-Snapcraft uses `linters`_ to check for issues during builds.
+The easiest way to handle warnings about the ELF interpreter and rpath is to let Snapcraft automatically patch the binaries using ``patchelf``.
 
-The easiest way to handle warnings about the ELF interpreter and rpath is to
-let Snapcraft automatically patch the binaries using ``patchelf``. This is
-done by passing a build attribute to the plugin:
+This is enabled by default for ``core20`` classic snaps, and can also be enabled for ``core22`` classic snaps if you are using Snapcraft 7.3 or a version from the edge channel. Pass the ``enable-patchelf`` build attribute to the plugin:
 
 .. literalinclude:: example/snap/snapcraft.yaml
    :language: yaml
    :start-at: build-attributes:
    :end-at: - enable-patchelf
 
-**Note:** Snapcraft 7.2 does not currently perform automatic ELF patching for ``core22`` classic snaps. If automatic ELF file patching is required, use ``base: core20`` until Snapcraft 7.3 is released to stable or use a version from the `edge channel <channels_>`_.
+This can be removed when automatic patching is enabled for ``core22`` classic snaps in stable releases.
 
 Rebuild the snap
 ----------------
